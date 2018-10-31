@@ -2,14 +2,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/fragment::header('Homepage')">
 </head>
-<body>
+<body class="bg-dark">
 
-<th:block th:include="fragments/fragment::navbar">
+<th:block th:replace="fragments/fragment::navbar">
 </th:block>
+<h1>These are all the posts:</h1>
+
+<div class="card mx-2 my-5 w-50 bg-danger" th:each="post:${posts}">
+    <a th:href="@{/posts/{id}(id=${post.id})}"><h3 class="card-header text-dark" th:text="${post.title}"></h3></a>
+    <p class="card-body" th:text="${post.body}"></p>
+    <div class="card-footer"></div>
+</div>
 
 
 
-<th:block th:include="fragments/fragment::scripts">
+<th:block th:replace="fragments/fragment::scripts">
 </th:block>
 
 </body>

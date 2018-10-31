@@ -3,23 +3,24 @@
 <head th:fragment="header(title)">
     <meta charset="UTF-8" />
     <title th:text="${title}"></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/blog.css"/>
 </head>
 <body>
 
-<div th:fragment="navbar" class="navbar navbar-expand sticky-top navbar-primary">
+<div th:fragment="navbar" class="navbar navbar-expand sticky-top bg-danger row">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="col-8 mr-auto">
     <a href="../login">
         <button type="button" class="btn btn-outline-dark">Login</button>
     </a>
-    <a href="../viewPosts">
+    <a href="../posts">
         <button type="button" class="btn btn-outline-dark">View Posts</button>
     </a>
-    <a href="../createPost">
+    <a href="../posts/create">
         <button type="button" class="btn btn-outline-dark">Write Post</button>
     </a>
     <a href="../viewProfile">
@@ -28,9 +29,10 @@
     <a href="../register">
         <button type="button" class="btn btn-outline-dark">Sign Up</button>
     </a>
-    <div class="navbar-nav ml-auto">
+    </div>
+    <div class="navbar-nav ml-auto col-3">
         <form action="/posts/search" method="POST" class="form-inline my-auto">
-            <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search posts..." aria-label="Search">
+            <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search posts..." aria-label="Search"/>
             <button class="btn btn-outline-dark ml-2" type="submit">Search</button>
         </form>
     </div>

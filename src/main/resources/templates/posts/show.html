@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/fragment::header('Post Page')">
+<head th:replace="fragments/fragment::header('Viewing Post')">
 </head>
-<body>
+<body class="bg-dark">
 
-<th:block th:include="fragments/fragment::navbar">
+<th:block th:replace="fragments/fragment::navbar">
 </th:block>
+<h1> Here is the requested post:</h1>
+<div class="card mx-2 my-5 w-50 bg-danger">
+    <h3 class="card-header" th:text="${post.title}"></h3>
+    <p class="card-body" th:text="${post.body}"></p>
+    <div class="card-footer">
+        <a th:href="@{/posts/{id}/update(id=${post.id})}"><button type="button" class="btn btn-outline-dark mr-0">Update Post</button></a>
+    </div>
+</div>
 
 
 
-<th:block th:include="fragments/fragment::scripts">
+<th:block th:replace="fragments/fragment::scripts">
 </th:block>
 </body>
 </html>
