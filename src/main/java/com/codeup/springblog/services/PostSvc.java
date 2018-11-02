@@ -1,7 +1,6 @@
 package com.codeup.springblog.services;
 
-import com.codeup.springblog.Post;
-import com.codeup.springblog.PostsRepo;
+import com.codeup.springblog.Models.Post;
 import org.springframework.stereotype.Service;
 
 @Service

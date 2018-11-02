@@ -1,6 +1,7 @@
-package com.codeup.springblog;
+package com.codeup.springblog.services;
 
 
+import com.codeup.springblog.Models.Post;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
