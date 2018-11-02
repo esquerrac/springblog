@@ -1,39 +1,34 @@
 package com.codeup.springblog.services;
 
 import com.codeup.springblog.Post;
+import com.codeup.springblog.PostsRepo;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Service
-public class PostSvc {
-    private List<Post> posts;
+public class PostSvc{
+    private PostsRepo postsRepo;
 
 
-    public PostSvc(){
-        posts=new ArrayList<>();
-        createPosts();
+    public PostSvc(PostsRepo postsRepo){
+        this.postsRepo = postsRepo;
     }
 
-    public List<Post> findAll() {
-        return posts;
+    public Iterable<Post> findAll() {
+        return postsRepo.findAll();
     }
 
     public Post findOne(int id){
-        return posts.get(id - 1);
+        return postsRepo.findOne(id);
     }
 
-    public Post save (Post post){
-        post.setId(posts.size()+1);
-        posts.add(post);
-        return post;
+    public Post createPost (Post post){
+        return postsRepo.save(post);
     }
 
-    private void createPosts(){
-        this.save(new Post("Test Post", "Should work"));
-        this.save(new Post("Another Post", "Should also work"));
-        this.save(new Post("I need more", "Posts to test out"));
-
+    public Post updatePost (Post post){
+        return postsRepo.save(post);
+    }
+    public void deletePost (Post post){
+        postsRepo.delete(post);
     }
 }

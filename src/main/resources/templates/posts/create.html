@@ -2,25 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/fragment::header('Create Post')">
 </head>
-<body class="bg-dark">
+<body class="bg-light">
 
 <th:block th:replace="fragments/fragment::navbar">
 </th:block>
 
 
-<div class="card bg-danger mx-2 my-5 w-75">
+<div class="card bg-success mx-2 my-5 w-75">
     <div class="card-header">
         <h3>Enter new post below:</h3>
     </div>
+    <form th:action="@{/posts/create}" th:method="post" th:object="${post}">
     <div class="card-body">
-        <form th:action="@{/posts/create}" th:method="post" th:object="${post}">
             <input th:field="*{title}" class="ml-0" placeholder="Post Title"/>
             <br/>
             <input th:field="*{body}" class="mr-auto" placeholder="Post Content"/>
-        </form>
     </div>
-    <div class="card-footer">
-        <button type="submit" class="btn btn-outline-dark ml-auto">Submit Post</button>
+        <button type="submit" class="btn btn-outline-light btn-lg btn-block ml-auto">Submit Post</button>
+    </form>
+        <div class="card-footer">
     </div>
 </div>
 

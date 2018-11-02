@@ -1,5 +1,6 @@
-package com.codeup.springblog;
+package com.codeup.springblog.controllers;
 
+import com.codeup.springblog.Post;
 import com.codeup.springblog.services.PostSvc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-
 public class PostController {
     private PostSvc postsvc;
 
@@ -39,9 +39,8 @@ public class PostController {
 
     @PostMapping("/posts/create")
     public String postCreated(@ModelAttribute Post post){
-        Post newPost = postsvc.save(post);
-        int id = newPost.getId();
-        return "redirect:/posts/"+id;
+        Post newPost = postsvc.createPost(post);
+        return "redirect:/posts/"+newPost.getId();
     }
 
     @GetMapping("/posts/{id}/update")
@@ -52,8 +51,13 @@ public class PostController {
 
     @PostMapping("/posts/{id}/update")
     public String postUpdated(@PathVariable int id, @ModelAttribute Post post){
-        postsvc.save(post);
+        postsvc.updatePost(post);
         return "redirect:/posts/"+id;
+    }
+    @PostMapping("/posts/{id}/delete")
+    public String postDelete (@PathVariable int id, @ModelAttribute Post post){
+        postsvc.deletePost(post);
+        return "redirect:/posts";
     }
 
 }

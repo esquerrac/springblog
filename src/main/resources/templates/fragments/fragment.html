@@ -8,32 +8,32 @@
 </head>
 <body>
 
-<div th:fragment="navbar" class="navbar navbar-expand sticky-top bg-danger row">
+<div th:fragment="navbar" class="navbar navbar-expand sticky-top bg-success row">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="col-8 mr-auto">
     <a href="../login">
-        <button type="button" class="btn btn-outline-dark">Login</button>
+        <button type="button" class="btn btn-outline-light">Login</button>
     </a>
     <a href="../posts">
-        <button type="button" class="btn btn-outline-dark">View Posts</button>
+        <button type="button" class="btn btn-outline-light">View Posts</button>
     </a>
     <a href="../posts/create">
-        <button type="button" class="btn btn-outline-dark">Write Post</button>
+        <button type="button" class="btn btn-outline-light">Write Post</button>
     </a>
     <a href="../viewProfile">
-        <button type="button" class="btn btn-outline-dark">Profile</button>
+        <button type="button" class="btn btn-outline-light">Profile</button>
     </a>
     <a href="../register">
-        <button type="button" class="btn btn-outline-dark">Sign Up</button>
+        <button type="button" class="btn btn-outline-light">Sign Up</button>
     </a>
     </div>
     <div class="navbar-nav ml-auto col-3">
         <form action="/posts/search" method="POST" class="form-inline my-auto">
             <input class="form-control mx-2" type="search" name="searchTerm" placeholder="Search posts..." aria-label="Search"/>
-            <button class="btn btn-outline-dark ml-2" type="submit">Search</button>
+            <button class="btn btn-outline-light ml-2" type="submit">Search</button>
         </form>
     </div>
 </div>

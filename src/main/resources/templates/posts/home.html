@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/fragment::header('Homepage')">
+</head>
+<body class="bg-light">
+
+<th:block th:replace="fragments/fragment::navbar">
+</th:block>
+<div class="background container-no-gutters">
+    <p>This div should have a sweet background picture with lowered opacity</p>
+
+
+    <div class="jumbotron mx-auto">
+        <h2>Some title will go here</h2>
+        <h4>Perhaps a nifty subtitle?</h4>
+
+    </div>
+
+</div>
+
+
+<th:block th:replace="fragments/fragment::scripts">
+</th:block>
+
+</body>
+</html>
