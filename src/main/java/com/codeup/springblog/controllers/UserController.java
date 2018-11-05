@@ -20,17 +20,27 @@ public class UserController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @GetMapping("/sign-up")
+    @GetMapping("/register")
     public String showSignupForm(Model model){
         model.addAttribute("user", new User());
-        return "users/sign-up";
+        return "users/register";
     }
 
-    @PostMapping("/sign-up")
+    @PostMapping("/register")
     public String saveUser(@ModelAttribute User user){
         String hash = passwordEncoder.encode(user.getPassword());
         user.setPassword(hash);
         userSvc.save(user);
-        return "redirect:/login";
+        return "redirect:/posts";
+    }
+
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "users/login";
+    }
+
+    @PostMapping("/login")
+    public String loginUser(){
+        return "/posts";
     }
 }
