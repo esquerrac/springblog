@@ -10,11 +10,21 @@
 <div class="card mx-2 my-5 w-50 bg-success">
     <h3 class="card-header" th:text="${post.title}"></h3>
     <p class="card-body" th:text="${post.body}"></p>
-        <a th:href="@{/posts/{id}/update(id=${post.id})}"><button type="button" class="btn btn-outline-light btn-block">Update Post</button></a>
+    <a th:href="@{/posts/{id}/update(id=${post.id})}">
+        <button type="button" class="btn btn-outline-light btn-block">Update Post</button>
+    </a>
     <div class="card-footer">
     </div>
 </div>
+<div class="card mx-2 my-5 w-50 bg-success">
+    <h5 class="card-header">Posted by:</h5>
+    <div class="card-body">
+        <p th:text="${post.user.username}"></p>
+        <p th:text="${post.user.email}"></p>
 
+    </div>
+
+</div>
 
 
 <th:block th:replace="fragments/fragment::scripts">

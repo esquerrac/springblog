@@ -27,6 +27,7 @@ public class PostSvc{
     public Post updatePost (Post post){
         return postsRepo.save(post);
     }
+
     public void deletePost (Post post){
         postsRepo.delete(post);
     }

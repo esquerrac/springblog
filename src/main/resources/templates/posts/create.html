@@ -13,14 +13,20 @@
         <h3>Enter new post below:</h3>
     </div>
     <form th:action="@{/posts/create}" th:method="post" th:object="${post}">
-    <div class="card-body">
+        <div class="card-body">
             <input th:field="*{title}" class="ml-0" placeholder="Post Title"/>
             <br/>
-            <input th:field="*{body}" class="mr-auto" placeholder="Post Content"/>
-    </div>
+            <textarea th:field="*{body}" class="mr-auto" placeholder="Post Content"/>
+
+            <div>
+                <span th:each="cat:${categories.name}">
+            <input type="checkbox" th:field="${post.categories}"><span th:text="${cat.name}"></span>
+                </span>
+            </div>
+        </div>
         <button type="submit" class="btn btn-outline-light btn-lg btn-block ml-auto">Submit Post</button>
     </form>
-        <div class="card-footer">
+    <div class="card-footer">
     </div>
 </div>
 
