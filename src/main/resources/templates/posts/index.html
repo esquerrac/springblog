@@ -6,10 +6,20 @@
 
 <th:block th:replace="fragments/fragment::navbar">
 </th:block>
-<h1>These are all the posts:</h1>
+<div id="1" class="container-fluid"><img src="https://imgur.com/a/zsR3H1K"/></div>
+<div id="2" class="container-fluid"><img src="https://imgur.com/YY52xP1"/></div>
+<div id="3" class="container-fluid"><img src="https://imgur.com/a5w2v1z"/></div>
+<div id="4" class="container-fluid"><img src="https://imgur.com/HtgJaqu"/></div>
+<div id="5" class="container-fluid"><img src="https://imgur.com/c1zq3yc"/></div>
+<div id="6" class="container-fluid"><img src="https://imgur.com/o7Mm9pD"/></div>
+<div id="7" class="container-fluid"><img src="https://imgur.com/TAK43Ri"/></div>
+<div id="8" class="container-fluid"><img src="https://imgur.com/FCHpSSy"/></div>
+<div id="9" class="container-fluid"><img src="https://imgur.com/O1AeSwK"/></div>
+<div id="10" class="container-fluid"><img src="https://imgur.com/mWP1Gg5"/></div>
+<div id="11" class="container-fluid"><img src="https://imgur.com/PRqjJz8"/></div>
+<h1>Taco Timeline:</h1>
 
 <div class="card mx-auto my-5 w-75 bg-success color-light" th:each="post:${posts}">
-    <!--<input type="hidden" id="catField" th:value="${cats.id}">-->
     <a th:href="@{/posts/{id}(id=${post.id})}"><h3 class="card-header text-dark" th:text="${post.title}"></h3></a>
     <p class="card-body" th:text="${post.body}"></p>
     <div class="card-footer">
@@ -21,13 +31,18 @@
 </div>
 
 
-
 <th:block th:replace="fragments/fragment::scripts">
 </th:block>
+<!--<script>-->
 
-<script>
-    $("#catField")
-</script>
+    <!--$(document).ready(setInterval(function(){-->
+        <!--var randomIndex = Math.ceil(Math.random()*11);-->
+        <!--console.log (randomIndex);-->
+        <!--var imageChoice = imageArray[randomIndex];-->
+        <!--console.log(imageChoice);-->
+        <!--$("#background").css("background-image",imageChoice);-->
+    <!--}, 1000))-->
+   <!--</script>-->
 
 </body>
 </html>

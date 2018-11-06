@@ -16,18 +16,15 @@
         <div class="card-body">
             <input th:field="*{title}" class="ml-0" placeholder="Post Title"/>
             <br/>
-            <textarea th:field="*{body}" class="mr-auto" placeholder="Post Content"/>
+            <textarea th:field="*{body}" class="my-2" rows="4" cols="50" placeholder="Post Content"/>
 
             <div>
-                <span th:each="cat:${categories.name}">
-            <input type="checkbox" th:field="${post.categories}"><span th:text="${cat.name}"></span>
-                </span>
+                <span th:each="cat:${cats}">
+                    <input type="checkbox" th:field="${post.categories}" th:value="${cat}"/><span th:text="${cat.name}"></span></span>
             </div>
         </div>
         <button type="submit" class="btn btn-outline-light btn-lg btn-block ml-auto">Submit Post</button>
     </form>
-    <div class="card-footer">
-    </div>
 </div>
 
 
