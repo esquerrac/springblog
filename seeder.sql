@@ -42,7 +42,7 @@ It’s taco Tuesday Monday. Give me tacos, or give me death. You see, the refrie
 
 Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise sauce, all placed on top of a corn or flour tortilla. Give me all the tacos, immediately. Does guac cost extra? It’s taco time all the time. Say taco one more time. Add in a few el Pastor with guac and diced onions. Tacos for breakfast, lunch and dinner. CARNITAS!! It’s long been rumored that the chupacabra is really just a crazed man who’s local taco shop went out of business. Fish tacos with cabbage slaw and a side of chips and guac.
 
-Make it a double there pal. If you were a taco, would you eat yourself? It’s taco Tuesday Monday. These tacos are lit 🔥. It’s raining tacos, from out of the sky, tacos, don’t even ask why. I think I’ve overdosed on tacos. Josh’s taco shack is the best taco shack. Burritos are very tasty. CARNE ASADA!! Burritos are very tasty. Make it a double there pal. Does guac cost extra? CARNE ASADA!! Carne asada on corn tortillas. CARNITAS!! Can you put some peppers and onions on that? I’ve been following that taco truck around all day.'
+Make it a double there pal. If you were a taco, would you eat yourself? It’s taco Tuesday Monday. These tacos are lit 🔥. It’s raining tacos, from out of the sky, tacos, don’t even ask why. I think I’ve overdosed on tacos. Josh’s taco shack is the best taco shack. Burritos are very tasty. CARNE ASADA!! Burritos are very tasty. Make it a double there pal. Does guac cost extra? CARNE ASADA!! Carne asada on corn tortillas. CARNITAS!! Can you put some peppers and onions on that? I’ve been following that taco truck around all day.',
 3
 ),(
 'I''ve been chasing this taco truck all day.',
@@ -66,7 +66,7 @@ I’ve been following that taco truck around all day. Burritos are very tasty. B
 1
 ),(
 'I''ve discovered a new recipe!',
-'Every day is taco ipsum tuesday. Tacos for breakfast, lunch and dinner. Say taco one more time. Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise sauce, all placed on top of a corn or flour tortilla. Tacos, tacos, tacos. Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise sauce, all placed on top of a corn or flour tortilla. Let’s do a beef and a chicken, and one with both. Can you put some peppers and onions on that? Ooh, with diced onions and a pinch of cilantro.'
+'Every day is taco ipsum tuesday. Tacos for breakfast, lunch and dinner. Say taco one more time. Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise sauce, all placed on top of a corn or flour tortilla. Tacos, tacos, tacos. Fish tacos: lettuce or cabbage, pico de gallo, avocado and a sour cream or citrus/mayonnaise sauce, all placed on top of a corn or flour tortilla. Let’s do a beef and a chicken, and one with both. Can you put some peppers and onions on that? Ooh, with diced onions and a pinch of cilantro.',
 2
 ),(
 'Taco Tuesday is a National holiday',
@@ -80,14 +80,14 @@ I’d have to say, those tacos are on fleek. Add in a few el Pastor with guac an
 
 insert into categories(name)
 values(
-'Flour',
-'Corn',
-'Chicken',
-'Beef',
-'Pork',
-'Vegetarian',
-'Gluten Free',
-'Spicy'
+'Flour'),
+('Corn'),
+('Chicken'),
+('Beef'),
+('Pork'),
+('Vegetarian'),
+('Gluten Free'),
+('Spicy'
 );
 
 insert into posts_categories(post_id, category_id)
