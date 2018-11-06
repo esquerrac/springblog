@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <title th:text="${title}"></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
-    <link rel="stylesheet" type="text/css" href="../../static/blog.css"/>
+    <link rel="stylesheet" type="text/css" href="blog.css"/>
 </head>
 <body>
+
 
 <div th:fragment="navbar" class="navbar navbar-expand sticky-top bg-success row">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -37,17 +38,52 @@
         </form>
     </div>
 </div>
+<div th:fragment="background" id="background">
+    <!--<div id="1" class="container-fluid"><img src="../../static/Images/taco1.jpg"/></div>-->
+    <!--<div id="2" class="container-fluid"><img src="../../static/Images/taco2.jpg"/></div>-->
+    <!--<div id="3" class="container-fluid"><img src="../../static/Images/taco3.jpg"/></div>-->
+    <!--<div id="4" class="container-fluid"><img src="../../static/Images/taco4.jpg"/></div>-->
+    <!--<div id="5" class="container-fluid"><img src="../../static/Images/taco5.jpg"/></div>-->
+    <!--<div id="6" class="container-fluid"><img src="../../static/Images/taco6.jpg"/></div>-->
+    <!--<div id="7" class="container-fluid"><img src="../../static/Images/taco7.jpg"/></div>-->
+    <!--<div id="8" class="container-fluid"><img src="../../static/Images/taco8.jpg"/></div>-->
+    <!--<div id="9" class="container-fluid"><img src="../../static/Images/taco9.jpg"/></div>-->
+    <!--<div id="10" class="container-fluid"><img src="../../static/Images/taco10.jpg"/></div>-->
+    <!--<div id="11" class="container-fluid"><img src="../../static/Images/taco11.jpg"/></div>-->
+</div>
 
 
 
 
 <div th:fragment="scripts">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
 
-        // --------------------------CUSTOM JS GOES HERE--------------------------------
+        var imageArray = [
+            "",
+            "../../static/Images/taco1.jpg",
+            "../../static/Images/taco2.jpg",
+            "../../static/Images/taco3.jpg",
+            "../../static/Images/taco4.jpg",
+            "../../static/Images/taco5.jpg",
+            "../../static/Images/taco6.jpg",
+            "../../static/Images/taco7.jpg",
+            "../../static/Images/taco8.jpg",
+            "../../static/Images/taco9.jpg",
+            "../../static/Images/taco0.jpg",
+            "../../static/Images/taco10.jpg",
+            "../../static/Images/taco11.jpg"
+        ];
+        $(document).ready(setInterval(function(){
+            var randomIndex = Math.ceil(Math.random()*11);
+            console.log (randomIndex);
+            var imageChoice = imageArray[randomIndex];
+            console.log(imageChoice);
+            $("#background").css("background-image",imageChoice);
+        }, 1000))
+
 
     </script>
 </div>
